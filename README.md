@@ -97,43 +97,43 @@ Used to fetch 2024-25 player stats (regular season and playoffs) and player age/
 * CV-Score: **~0.786**  
 
 ## Results  
-Predicted Average Annual Contract Value for Top 2025 Free Agents:
-Kyrie Irving - $42,471,626
-Cam Thomas - $31,756,363
-Myles Turner - $27,611,659
-Fred VanVleet - $24,123,587
-Josh Giddey - $23,356,955
-Bobby Portis - $21,574,133
-Jonathan Kuminga - $19,356,067
-Santi Aldama - $18,055,709
-Brook Lopez - $16,325,730
-Quentin Grimes - $14,797,281
-Al Horford - $14,150,115
-Davion Mitchell - $13,700,912
-Ty Jerome - $12,497,836
-
-Top 20 Most Valuable NBA players ahead of 2025/26:
-0	Shai Gilgeous-Alexander	- $56,212,455
-1	Luka Dončić - $55,977,432
-2	Nikola Jokić - $55,758,813
-3	Giannis Antetokounmpo - $55,550,377
-4	LeBron James - $55,146,392
-5	Jayson Tatum - $54,197,224
-6	Jalen Brunson - $53,718,889
-7	Stephen Curry - $53,356,770
-8	Anthony Edwards - $52,536,129
-9	Donovan Mitchell - $51,617,024
-10	Karl-Anthony Towns - $51,084,080
-11	Jaylen Brown - $51,022,637
-12	Cade Cunningham - $50,417,849
-13	Paolo Banchero - $49,357,576
-14	Franz Wagner - $48,381,849
-15	Kawhi Leonard - $47,277,106
-16	Tyler Herro - $46,657,364
-17	Jamal Murray - $46,626,849
-18	James Harden - $46,455,824
-19	Ja Morant - $46,253,779
-20	Pascal Siakam - $46,106,982
+Predicted Average Annual Contract Value for Top 2025 Free Agents:  
+Kyrie Irving - $42,471,626  
+Cam Thomas - $31,756,363  
+Myles Turner - $27,611,659  
+Fred VanVleet - $24,123,587  
+Josh Giddey - $23,356,955  
+Bobby Portis - $21,574,133  
+Jonathan Kuminga - $19,356,067  
+Santi Aldama - $18,055,709  
+Brook Lopez - $16,325,730  
+Quentin Grimes - $14,797,281  
+Al Horford - $14,150,115  
+Davion Mitchell - $13,700,912  
+Ty Jerome - $12,497,836  
+  
+Top 20 Most Valuable NBA players ahead of 2025/26:  
+0	Shai Gilgeous-Alexander	- $56,212,455  
+1	Luka Dončić - $55,977,432  
+2	Nikola Jokić - $55,758,813  
+3	Giannis Antetokounmpo - $55,550,377  
+4	LeBron James - $55,146,392  
+5	Jayson Tatum - $54,197,224  
+6	Jalen Brunson - $53,718,889  
+7	Stephen Curry - $53,356,770  
+8	Anthony Edwards - $52,536,129  
+9	Donovan Mitchell - $51,617,024  
+10	Karl-Anthony Towns - $51,084,080  
+11	Jaylen Brown - $51,022,637  
+12	Cade Cunningham - $50,417,849  
+13	Paolo Banchero - $49,357,576  
+14	Franz Wagner - $48,381,849  
+15	Kawhi Leonard - $47,277,106  
+16	Tyler Herro - $46,657,364  
+17	Jamal Murray - $46,626,849  
+18	James Harden - $46,455,824  
+19	Ja Morant - $46,253,779  
+20	Pascal Siakam - $46,106,982  
 
 * Lebron Jame's age is not appropriately accounted for in the model as it is an extreme outlier.
 * Barely any NBA players make it to 40.
