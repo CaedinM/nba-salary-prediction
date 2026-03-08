@@ -22,9 +22,13 @@ In this project, I use historical NBA player performance data from 2013-2024 to 
 https://www.spotrac.com/nba/contracts  
 Features:  Player, POS: Primary position, AGE (at signing), START: Year contract begins, END: Year contract ends, Yrs: Contract length, Value: Total contract value, AAV: Average annual value of contract
 
-**2. NBA Stats Kaggle Dataset, via NBA.com**  
-https://www.kaggle.com/datasets/shivamkumar121215/nba-stats-dataset-for-last-10-years  
+**2. NBA Stats Kaggle Dataset, via NBA.com**
+https://www.kaggle.com/datasets/shivamkumar121215/nba-stats-dataset-for-last-10-years
 Features: Player, Year, Team, regular season and playoff stats: GP, MIN, PTS, FGM, FGA, FG_PCT, FG3M, FG3A, FG3_PCT, FTM, FTA, FT_PCT, OREB, DREB, REB, AST, STL, BLK, TOV, PF
+
+**3. nba_api (Python package)**
+https://github.com/swar/nba_api
+Used to fetch 2024-25 player stats (regular season and playoffs) and player age/position data directly from NBA.com endpoints.
 
 ## Preprocessing 
 ### Cleaning:  
@@ -36,11 +40,31 @@ Features: Player, Year, Team, regular season and playoff stats: GP, MIN, PTS, FG
 - Inner join deals and stats tables on player and year/season.  
 - Match reformat seasons from YYYY-YY to just the year that the season ended. This is to match the year the contract is signed in.
 
-### Feature Engineering:  
-- Add per game columns and per 36 minute columns for cumulative stats, giving the model more context.    
-- Normalize stats by season by using the ratio-to-mean to compare performance to league average in that season. This accounts for leaguewide trends across time. (Ex: 20 PPG in 2025 is much more common than it was in 2015 due the widespread adoption of increasing three point attempts and a faster pace of play).    
-- Normalize our target variable across years by using salary ratio instead of pure salary.    
-    - salary ratio: A player’s salary as a percentage of the allowed maximum salary cap for that season.    
+### Feature Engineering:
+
+**Target Variable:**
+- `salary_ratio`: AAV divided by the league salary cap for that year — normalizes salary across seasons so the model learns value relative to the cap, not raw dollars.
+
+**Per-Game and Per-36 Statistics:**
+- `[stat]_per_game`: Each counting stat divided by games played (regular season and playoffs).
+- `[stat]_per36`: Each counting stat scaled to a 36-minute pace (regular season and playoffs) — standard NBA efficiency metric.
+
+**Season-Normalized Ratio Features:**
+- `[stat]_ratio`: Each stat expressed as deviation from the league average for that season (i.e., `player_stat / league_mean - 1`). Applied to counting stats, per-game, and per-36 variants. Accounts for league-wide trends over time (e.g., 20 PPG is far more common in 2025 than 2015).
+
+**Advanced Efficiency Metrics:**
+- `TS_pct_RegularSeason` / `TS_pct_Playoffs`: True Shooting Percentage — accounts for 2-pointers, 3-pointers, and free throws. Formula: `PTS / (2 * (FGA + 0.44 * FTA))`.
+- `USG_proxy_RegularSeason` / `USG_proxy_Playoffs`: Usage rate proxy — share of team offensive possessions used per 36 minutes. Formula: `(FGA + 0.44*FTA + TOV) / MIN * 36`.
+
+**Composite and Uplift Features:**
+- `BoxComposite_RegularSeason` / `BoxComposite_Playoffs`: Points + Rebounds + Assists per game — a simple star-quality signal.
+- `PTS_uplift`, `REB_uplift`, `AST_uplift`: Per-game playoff stat minus regular season stat — captures whether a player elevates in the postseason. Players whose teams missed the playoffs receive 0 (no penalty).
+
+**Playoff Participation:**
+- `made_playoffs`: Binary flag (1/0) indicating whether the player appeared in any playoff games that season.
+
+**Non-Linear Age:**
+- `Age_squared`: Age² — captures the non-linear relationship between age and salary (peak value around 27–29, declining on either side).
 
 ## Model Selection
 ### Models
