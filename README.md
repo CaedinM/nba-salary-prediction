@@ -97,46 +97,51 @@ Used to fetch 2024-25 player stats (regular season and playoffs) and player age/
 * CV-Score: **~0.786**  
 
 ## Results  
-Predicted Average Annual Contract Value for Top 2025 Free Agents:  
-Kyrie Irving - $42,471,626  
-Cam Thomas - $31,756,363  
-Myles Turner - $27,611,659  
-Fred VanVleet - $24,123,587  
-Josh Giddey - $23,356,955  
-Bobby Portis - $21,574,133  
-Jonathan Kuminga - $19,356,067  
-Santi Aldama - $18,055,709  
-Brook Lopez - $16,325,730  
-Quentin Grimes - $14,797,281  
-Al Horford - $14,150,115  
-Davion Mitchell - $13,700,912  
-Ty Jerome - $12,497,836  
+Top 15 Predicted Average Annual Contract Value for 2025 Free Agents:  
+1. Kyrie Irving - $42,471,626  
+2. Cam Thomas - $31,756,363  
+3. Myles Turner - $27,611,659  
+4. Fred VanVleet - $24,123,587  
+5. Josh Giddey - $23,356,955  
+6. Bobby Portis - $21,574,133  
+7. Jonathan Kuminga - $19,356,067  
+8. Santi Aldama - $18,055,709  
+9. Brook Lopez - $16,325,730  
+10. Quentin Grimes - $14,797,281  
+11. Al Horford - $14,150,115  
+12. Davion Mitchell - $13,700,912  
+13. Ty Jerome - $12,497,836  
+14. Tre Mann - $11,639,865  
+15. Dorian Finney-Smith - $11,383,169  
   
 Top 20 Most Valuable NBA players ahead of 2025/26:  
-0	Shai Gilgeous-Alexander	- $56,212,455  
-1	Luka Dončić - $55,977,432  
-2	Nikola Jokić - $55,758,813  
-3	Giannis Antetokounmpo - $55,550,377  
-4	LeBron James - $55,146,392  
-5	Jayson Tatum - $54,197,224  
-6	Jalen Brunson - $53,718,889  
-7	Stephen Curry - $53,356,770  
-8	Anthony Edwards - $52,536,129  
-9	Donovan Mitchell - $51,617,024  
-10	Karl-Anthony Towns - $51,084,080  
-11	Jaylen Brown - $51,022,637  
-12	Cade Cunningham - $50,417,849  
-13	Paolo Banchero - $49,357,576  
-14	Franz Wagner - $48,381,849  
-15	Kawhi Leonard - $47,277,106  
-16	Tyler Herro - $46,657,364  
-17	Jamal Murray - $46,626,849  
-18	James Harden - $46,455,824  
-19	Ja Morant - $46,253,779  
-20	Pascal Siakam - $46,106,982  
+1. Shai Gilgeous-Alexander	- $56,212,455  
+2. Luka Dončić - $55,977,432  
+3. Nikola Jokić - $55,758,813  
+4. Giannis Antetokounmpo - $55,550,377  
+5. LeBron James - $55,146,392  
+6. Jayson Tatum - $54,197,224  
+7. Jalen Brunson - $53,718,889  
+8. Stephen Curry - $53,356,770  
+9. Anthony Edwards - $52,536,129  
+10. Donovan Mitchell - $51,617,024  
+11. Karl-Anthony Towns - $51,084,080  
+12. Jaylen Brown - $51,022,637  
+13. Cade Cunningham - $50,417,849  
+14. Paolo Banchero - $49,357,576  
+15. Franz Wagner - $48,381,849  
+16. Kawhi Leonard - $47,277,106  
+17. Tyler Herro - $46,657,364  
+18. Jamal Murray - $46,626,849  
+19. James Harden - $46,455,824  
+20. Ja Morant - $46,253,779  
 
-* Lebron Jame's age is not appropriately accounted for in the model as it is an extreme outlier.
-* Barely any NBA players make it to 40.
+**Post 2025 Free-Agency UPDATE:**  
+* Correctly predicted 10 of the top 15 highest AAV players including 6 of the top 8. 
+- Overpredicted AAV for high volume scorers with defensive shortcomings (ex: Cam Thomas, Quentin Grimes)
+    - Insight: Teams are prioritizing highly-efficient low-volume scorers and defensive contributors ahead of percieved high-volume scorers or "shot-chuckers". 
+- Overpredicted AAV for veterans above 38+ y/o who are still performing at a high level (ex: Al Horford, Brook Lopez)
+    - Hypothesis: Historically, players who make it to this age are superstars i.e. Lebron James, Kobe Bryant, Vince Carter who demand max or near max value contracts... however, due to advancements in medtech and a better understanding of health and wellness, we are seeing role players remain effective for longer and extend their careers. The model is not fully accounting for these types of players at this age range because they are historically rare.
 
 
 ## Author
