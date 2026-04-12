@@ -142,6 +142,7 @@ Top 20 Most Valuable NBA players ahead of 2025/26:
     - Insight: Teams are prioritizing highly-efficient low-volume scorers and defensive contributors ahead of percieved high-volume scorers or "shot-chuckers". 
 - Overpredicted AAV for veterans above 38+ y/o who are still performing at a high level (ex: Al Horford, Brook Lopez)
     - Hypothesis: Historically, players who make it to this age are superstars i.e. Lebron James, Kobe Bryant, Vince Carter who demand max or near max value contracts... however, due to advancements in medtech and a better understanding of health and wellness, we are seeing role players remain effective for longer and extend their careers. The model is not fully accounting for these types of players at this age range because they are historically rare.
+- The model did not account for the new salary aprons implemented in the 2023 collective bargaining agreement. These aprons essentially act as a hard cap for many teams and massively limited teams spending capacities in the 2025 free agent market. Many players struggled to find suitors and settled for lower-value contracts.
 
 
 ## Author
